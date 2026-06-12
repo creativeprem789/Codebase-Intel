@@ -1,0 +1,23 @@
+# logs
+logs
+*.log
+npm-debug.log*
+
+# dependency directories
+node_modules/
+jspm_packages/
+
+# build directory
+dist/
+tmp/
+out/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store

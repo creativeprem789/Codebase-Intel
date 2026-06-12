@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background Rounded Box -->
+  <rect x="5" y="5" width="90" height="90" rx="24" fill="url(#grad)" />
+  
+  <!-- Code Brackets < / > -->
+  <path d="M35 32 L18 50 L35 68" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M65 32 L82 50 L65 68" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="56" y1="28" x2="44" y2="72" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+</svg>
