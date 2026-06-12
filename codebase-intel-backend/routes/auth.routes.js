@@ -31,8 +31,8 @@ router.get('/google/callback',
     failureRedirect: `${FRONTEND_URL}/login?error=oauth_failed`,  // on failure
   }),
   (req, res) => {
-    // Authentication succeeded — redirect to the frontend dashboard
-    res.redirect(`${FRONTEND_URL}/dashboard`)
+    // Authentication succeeded — redirect to the frontend base URL
+    res.redirect(FRONTEND_URL)
   }
 )
 
