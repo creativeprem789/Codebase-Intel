@@ -1,5 +1,6 @@
 // src/components/SignupPage.jsx
 import { useState, useEffect } from 'react'
+import { BACKEND_URL } from '../api/backend'
 
 export default function SignupPage({ onBack, onGoogleSignIn }) {
   const [visible, setVisible] = useState(false)
@@ -11,7 +12,7 @@ export default function SignupPage({ onBack, onGoogleSignIn }) {
 
   function handleGoogleClick() {
     setIsSigningIn(true)
-    window.location.href = 'http://localhost:3001/auth/google'
+    window.location.href = `${BACKEND_URL}/auth/google`
   }
 
   return (

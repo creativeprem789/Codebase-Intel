@@ -1,7 +1,7 @@
 // src/api/backend.js
 import axios from 'axios'
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 const BASE = `${BACKEND_URL}/api`
 
 // Configure Axios globally to send cookies with all requests (needed for passport session)
