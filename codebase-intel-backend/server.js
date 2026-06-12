@@ -12,6 +12,12 @@ import './config/passport.js'  // registers the Google OAuth strategy
 const app  = express()
 const PORT = process.env.PORT || 3001
 
+const isProduction = process.env.NODE_ENV === 'production' || (process.env.GOOGLE_CALLBACK_URL && !process.env.GOOGLE_CALLBACK_URL.includes('localhost'))
+
+if (isProduction) {
+  app.set('trust proxy', 1) // trust first proxy to allow secure cookies over https behind Render load balancer
+}
+
 // ── CORS ─────────────────────────────────────────────────────────────────────
 // Allow only your frontend origin in production
 app.use(cors({
@@ -31,7 +37,8 @@ app.use(session({
   resave:            false,
   saveUninitialized: false,
   cookie: {
-    secure:   process.env.NODE_ENV === 'production',  // HTTPS only in prod
+    secure:   isProduction,          // HTTPS only in prod
+    sameSite: isProduction ? 'none' : 'lax', // allow cross-site cookies in prod
     httpOnly: true,
     maxAge:   1000 * 60 * 60 * 24,   // 1 day
   },
