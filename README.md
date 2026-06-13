@@ -2,6 +2,16 @@
 
 An advanced AI-powered onboarding system designed to help developers immediately get up to speed with new or legacy codebases. By uploading codebase files, the system initiates a sequential, multi-agent AI pipeline that maps architecture, identifies danger zones, extracts unwritten rules, drafts an onboarding handbook, and hosts an interactive Q&A assistant (Oracle).
 
+Live Demo Link: https://codebase-intel.vercel.app/
+
+<img width="1600" height="767" alt="WhatsApp Image 2026-06-12 at 23 12 22" src="https://github.com/user-attachments/assets/14a05b85-e0de-49f2-9a14-07835f501caf" />
+
+<img width="1600" height="769" alt="WhatsApp Image 2026-06-12 at 23 42 46" src="https://github.com/user-attachments/assets/8205182e-043e-4a8a-b2b2-757901e5f779" />
+
+<img width="1600" height="779" alt="WhatsApp Image 2026-06-12 at 23 53 06" src="https://github.com/user-attachments/assets/aaf35345-e091-451f-a570-290656345e98" />
+
+
+
 ---
 
 ## 🏗️ System Architecture
@@ -182,3 +192,8 @@ node test.js
 - **CORS Errors**: Ensure that the frontend origin (`http://localhost:5173`) matches the `FRONTEND_URL` config in your backend `.env` file, and that your requests use `withCredentials: true` (Axios) or `credentials: 'include'` (Fetch).
 - **Token Limits**: Large codebases might hit LLM token context limits. The system filters files and clips content in `utils/fileParser.js`. Adjust context slicing limit (e.g., from `8000` to `5000`) if you hit truncation limits.
 - **Switching to Gemini**: If you run out of Groq API rate limits, you can substitute `ChatGroq` with LangChain's `ChatGoogleGenerativeAI` inside `agents/cartographer.js`, `agents/archaeologist.js`, `agents/guide.js`, and `agents/oracle.js`.
+
+Made By Team Codebase Intel:
+Samriddhi Kumari
+Aayushi 
+Prem Kumar Rai
